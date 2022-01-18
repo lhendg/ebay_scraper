@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-BASE_LINK = "https://www.ebay.co.uk/sch/i.html?_dmd=2&iconV2Request=true&_ssn=monster_racking&store_cat=0&store_name=monsterracking&_oac=1&_ipg=192"
+BASE_LINK = ""
 
 page = BeautifulSoup(requests.get(BASE_LINK).text, 'html.parser')
 item_count = int(re.findall(r'\d+', page.find('h1', class_="srp-controls__count-heading").text)[0])
